@@ -1,41 +1,56 @@
 'use client'
 
+import { useRef } from 'react';
+
 export default function Home() {
-  const downloadPDF = () => {
-    window.print();
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const downloadPDF = async () => {
+    if (!contentRef.current) return;
+
+    try {
+      // Dynamic imports for client-side only
+      const html2canvas = (await import('html2canvas')).default;
+      const jsPDF = (await import('jspdf')).jsPDF;
+
+      // Hide download buttons temporarily
+      const buttons = contentRef.current.querySelectorAll('.no-print');
+      buttons.forEach(btn => (btn as HTMLElement).style.display = 'none');
+
+      // Show print-only content
+      const printElements = contentRef.current.querySelectorAll('.print-contact');
+      printElements.forEach(el => (el as HTMLElement).style.display = 'block');
+
+      // Generate canvas from HTML
+      const canvas = await html2canvas(contentRef.current, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#ffffff'
+      });
+
+      // Restore original display
+      buttons.forEach(btn => (btn as HTMLElement).style.display = '');
+      printElements.forEach(el => (el as HTMLElement).style.display = 'none');
+
+      // Create PDF
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+      
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save('Hitesh_Prajapati_Resume.pdf');
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      // Fallback to print
+      window.print();
+    }
   };
 
   return (
     <div className="columns" style={{paddingTop: '20px'}}>
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @media print {
-            body { 
-              font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-              font-size: 12px !important;
-              line-height: 1.4 !important;
-              color: #000 !important;
-              background: white !important;
-            }
-            .no-print { display: none !important; }
-            .fa { display: none !important; }
-            a { color: #000 !important; text-decoration: none !important; }
-            .columns { padding-top: 0 !important; }
-            .column { padding: 0.5rem !important; }
-            .title { font-size: 24px !important; margin-bottom: 8px !important; }
-            .subtitle { font-size: 14px !important; }
-            .heading h3 { font-size: 16px !important; margin: 12px 0 6px 0 !important; }
-            .content { margin-bottom: 8px !important; }
-            ul { margin-top: 4px !important; }
-            li { margin-bottom: 4px !important; }
-            .level { margin-bottom: 6px !important; }
-            .print-contact { display: block !important; }
-          }
-          .print-contact { display: none; }
-        `
-      }} />
-      
-      <div className="column is-8 is-offset-2">
+      <div className="column is-8 is-offset-2" ref={contentRef}>
         
         <div className="level content is-marginless">
           <p className="title is-2">Hitesh Prajapati</p>
@@ -45,7 +60,7 @@ export default function Home() {
             <a href="https://github.com/hitesh103" className="icon"><i className="fa fa-github-square" aria-hidden="true"></i></a>
             <button onClick={downloadPDF} className="icon" style={{border: 'none', background: 'none', cursor: 'pointer'}}><i className="fa fa-download" aria-hidden="true"></i></button>
           </p>
-          <p className="subtitle is-5 print-contact">
+          <p className="subtitle is-5 print-contact" style={{display: 'none'}}>
             📧 hiteshsprajapati103@gmail.com • 💼 linkedin.com/in/hitesh103 • 🔗 github.com/hitesh103
           </p>
         </div>
