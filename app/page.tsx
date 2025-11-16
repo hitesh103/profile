@@ -71,7 +71,7 @@ export default function Home() {
                 Event-Driven Product Sync Pipeline
                 <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot AWS SQS Lambda Elasticsearch</span>
               </span>
-              Replaced manual full-table sync job (100+ DB queries/sec) with an event-driven pipeline. Product creation now pushes an event to SQS → triggers Lambda → updates Elasticsearch in real time. Reduced sync load by >90% and eliminated stale product entries on storefront.
+              Replaced manual full-table sync job (100+ DB queries/sec) with an event-driven pipeline. Product creation now pushes an event to SQS → triggers Lambda → updates Elasticsearch in real time. Reduced sync load by &gt;90% and eliminated stale product entries on storefront.
             </li>
             <li className="content is-marginless" style={{fontSize: '0.8rem'}}>
               <span className="heading is-marginless">
