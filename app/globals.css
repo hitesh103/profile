@@ -3,39 +3,23 @@
 @tailwind utilities;
 
 body {
-  @apply max-w-4xl mx-auto px-8 py-16 text-gray-800 bg-gradient-to-br from-slate-50 to-blue-50;
-  font-family: 'Inter', system-ui, sans-serif;
-  line-height: 1.7;
+  @apply max-w-2xl mx-auto px-6 pt-12 pb-20 text-neutral-800 bg-white;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
 }
 
 h1 {
-  @apply text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+  @apply text-3xl font-bold mb-2 text-black;
 }
 
 h2 {
-  @apply text-2xl font-semibold mt-12 mb-6 text-gray-900 border-l-4 border-blue-500 pl-4;
+  @apply text-xl font-semibold mt-8 mb-3 text-black;
 }
 
 .section-item {
-  @apply mb-8 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100;
+  @apply mb-4;
 }
 
-.tech-badge {
-  @apply inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mr-2 mb-2;
-}
-
-.project-card {
-  @apply bg-white p-6 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-blue-200;
-}
-
-.link-hover {
-  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200 underline decoration-2 underline-offset-2;
-}
-
-.btn-primary {
-  @apply inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md;
-}
-
-.contact-item {
-  @apply flex items-center space-x-3 text-gray-700 hover:text-blue-600 transition-colors duration-200;
+a {
+  @apply text-blue-600 hover:underline;
 }
