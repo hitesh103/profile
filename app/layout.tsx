@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Hitesh Prajapati - Portfolio',
-  description: 'Backend Engineer specializing in Event Platforms and Distributed Systems',
+  title: 'Hitesh Prajapati - Backend Engineer',
+  description: 'Backend Engineer specializing in Event Platforms, Distributed Systems, and Scalable Architecture',
 }
 
 export default function RootLayout({
@@ -12,6 +12,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
       <body>{children}</body>
     </html>
   )
