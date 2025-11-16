@@ -6,55 +6,49 @@ export default function Home() {
   };
 
   return (
-    <>
-      <style jsx global>{`
-        @media print {
-          body { 
-            font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-            font-size: 12px !important;
-            line-height: 1.4 !important;
-            color: #000 !important;
-            background: white !important;
-          }
-          .no-print { display: none !important; }
-          .fa { display: none !important; }
-          a { color: #000 !important; text-decoration: none !important; }
-          .columns { padding-top: 0 !important; }
-          .column { padding: 0.5rem !important; }
-          .title { font-size: 24px !important; margin-bottom: 8px !important; }
-          .subtitle { font-size: 14px !important; }
-          .heading h3 { font-size: 16px !important; margin: 12px 0 6px 0 !important; }
-          .content { margin-bottom: 8px !important; }
-          ul { margin-top: 4px !important; }
-          li { margin-bottom: 4px !important; }
-          .level { margin-bottom: 6px !important; }
-        }
-      `}</style>
-      
-      <div className="columns" style={{paddingTop: '20px'}}>
-        <div className="column is-8 is-offset-2">
-          
-          <div className="level content is-marginless">
-            <p className="title is-2">Hitesh Prajapati</p>
-            <p className="subtitle is-5 no-print">
-              <a href="mailto:hiteshsprajapati103@gmail.com" className="icon"><i className="fa fa-envelope-square" aria-hidden="true"></i></a>
-              <a href="https://www.linkedin.com/in/hitesh103/" className="icon"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
-              <a href="https://github.com/hitesh103" className="icon"><i className="fa fa-github-square" aria-hidden="true"></i></a>
-              <button onClick={downloadPDF} className="icon" style={{border: 'none', background: 'none', cursor: 'pointer'}}><i className="fa fa-download" aria-hidden="true"></i></button>
-            </p>
-            <p className="subtitle is-5" style={{display: 'none'}}>
-              📧 hiteshsprajapati103@gmail.com • 💼 linkedin.com/in/hitesh103 • 🔗 github.com/hitesh103
-            </p>
-          </div>
-
-          <style jsx>{`
-            @media print {
-              .subtitle:last-child {
-                display: block !important;
-                font-size: 14px !important;
-              }
+    <div className="columns" style={{paddingTop: '20px'}}>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @media print {
+            body { 
+              font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+              font-size: 12px !important;
+              line-height: 1.4 !important;
+              color: #000 !important;
+              background: white !important;
             }
-          `}</style>
+            .no-print { display: none !important; }
+            .fa { display: none !important; }
+            a { color: #000 !important; text-decoration: none !important; }
+            .columns { padding-top: 0 !important; }
+            .column { padding: 0.5rem !important; }
+            .title { font-size: 24px !important; margin-bottom: 8px !important; }
+            .subtitle { font-size: 14px !important; }
+            .heading h3 { font-size: 16px !important; margin: 12px 0 6px 0 !important; }
+            .content { margin-bottom: 8px !important; }
+            ul { margin-top: 4px !important; }
+            li { margin-bottom: 4px !important; }
+            .level { margin-bottom: 6px !important; }
+            .print-contact { display: block !important; }
+          }
+          .print-contact { display: none; }
+        `
+      }} />
+      
+      <div className="column is-8 is-offset-2">
+        
+        <div className="level content is-marginless">
+          <p className="title is-2">Hitesh Prajapati</p>
+          <p className="subtitle is-5 no-print">
+            <a href="mailto:hiteshsprajapati103@gmail.com" className="icon"><i className="fa fa-envelope-square" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/hitesh103/" className="icon"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="https://github.com/hitesh103" className="icon"><i className="fa fa-github-square" aria-hidden="true"></i></a>
+            <button onClick={downloadPDF} className="icon" style={{border: 'none', background: 'none', cursor: 'pointer'}}><i className="fa fa-download" aria-hidden="true"></i></button>
+          </p>
+          <p className="subtitle is-5 print-contact">
+            📧 hiteshsprajapati103@gmail.com • 💼 linkedin.com/in/hitesh103 • 🔗 github.com/hitesh103
+          </p>
+        </div>
 
         <div className="content">
           <span className="heading"><h3>Education</h3></span>
