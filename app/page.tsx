@@ -32,23 +32,23 @@ export default function Home() {
             <li className="content is-marginless" style={{fontSize: '0.8rem'}}>
               <span className="heading is-marginless">
                 Event-Driven Pipeline Architecture
-                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>AWS SQS Lambda Node.js</span>
+                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot AWS SQS</span>
               </span>
-              Replaced full-table sync with AWS SQS + Lambda event-driven pipeline, reducing processing time by 70%. Built scalable architecture handling millions of events with real-time processing capabilities.
+              Replaced full-table sync with AWS SQS + Spring Boot event-driven pipeline, reducing processing time by 70%. Built scalable microservices architecture handling millions of events with real-time processing capabilities.
             </li>
             <li className="content is-marginless" style={{fontSize: '0.8rem'}}>
               <span className="heading is-marginless">
                 MCP Server Integration
-                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>TypeScript Amazon Q CLI</span>
+                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot Amazon Q CLI</span>
               </span>
-              Built custom MCP server integration for Amazon Q CLI, enabling seamless access to internal documentation and improving developer productivity by 40%.
+              Built custom MCP server integration using Spring Boot for Amazon Q CLI, enabling seamless access to internal documentation and improving developer productivity by 40%.
             </li>
             <li className="content is-marginless" style={{fontSize: '0.8rem'}}>
               <span className="heading is-marginless">
                 Operational Automation
-                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Node.js Redis</span>
+                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot Redis</span>
               </span>
-              Implemented business logic for product readiness workflows and operational automation systems, reducing manual intervention by 85%.
+              Implemented business logic for product readiness workflows and operational automation systems using Spring Boot microservices, reducing manual intervention by 85%.
             </li>
           </ul>
 
@@ -134,17 +134,17 @@ export default function Home() {
           <span className="heading"><h3>Skills</h3></span>
           <p className="heading is-marginless">Languages</p>
           <p style={{fontSize: '0.8rem'}}>
-            JavaScript, TypeScript, Node.js, PHP, C++, Java, Python, C
+            Java, JavaScript, TypeScript, Node.js, PHP, C++, Python, C
+          </p>
+
+          <p className="heading is-marginless">Frameworks & Technologies</p>
+          <p style={{fontSize: '0.8rem'}}>
+            Spring Boot, Express.js, Next.js, React, Socket.io, Playwright
           </p>
 
           <p className="heading is-marginless">Databases & Infrastructure</p>
           <p style={{fontSize: '0.8rem'}}>
-            Redis, MongoDB, PostgreSQL, Elasticsearch, Docker, AWS, RabbitMQ
-          </p>
-
-          <p className="heading is-marginless">Frameworks & Tools</p>
-          <p style={{fontSize: '0.8rem'}}>
-            Express.js, Next.js, React, Socket.io, Playwright, Docker Swarm, Portainer
+            Redis, MongoDB, PostgreSQL, Elasticsearch, Docker, AWS, RabbitMQ, Docker Swarm, Portainer
           </p>
         </div>
 
