@@ -16,7 +16,7 @@ export default function Home() {
         <div className="content">
           <span className="heading"><h3>Education</h3></span>
           <div className="level">
-            <p className="is-marginless">L.D. College of Engineering, Ahmedabad<br/><span className="content is-marginless" style={{fontSize: '0.8rem'}}>Bachelor of Electronics & Communication Engineering; CGPA 8.6/10</span></p>
+            <p className="is-marginless">L.D. College of Engineering, Ahmedabad<br/><span className="content is-marginless" style={{fontSize: '0.8rem'}}>Bachelor of Electronics & Communication Engineering; CGPA 7.9/10</span></p>
             <p style={{textAlign: 'right', fontSize: '0.8rem'}}>Ahmedabad, India<br/><span className="content is-marginless">Jun 2020 - May 2024</span></p>
           </div>
         </div>
@@ -25,7 +25,7 @@ export default function Home() {
           <span className="heading"><h3>Experience</h3></span>
           
           <div className="level is-marginless">
-            <p className="is-marginless">Hopscotch India<br/><span className="content is-marginless" style={{fontSize: '0.8rem'}}>Backend Engineer</span></p>
+            <p className="is-marginless">Hopscotch India<br/><span className="content is-marginless" style={{fontSize: '0.8rem'}}>Software Engineer</span></p>
             <p style={{textAlign: 'right', fontSize: '0.8rem'}}>Remote<br/><span className="content is-marginless">Aug 2024 - Present</span></p>
           </div>
           <ul style={{marginTop: '0.2em', listStyleType: 'circle'}}>
@@ -38,17 +38,17 @@ export default function Home() {
             </li>
             <li className="content is-marginless" style={{fontSize: '0.8rem'}}>
               <span className="heading is-marginless">
-                MCP Server Integration
-                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot Amazon Q CLI</span>
+                MCP Server Integration with Confluence
+                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot Confluence API</span>
               </span>
-              Built custom MCP server integration using Spring Boot for Amazon Q CLI, enabling seamless access to internal documentation and improving developer productivity by 40%.
+              Integrated MCP server with Confluence allowing developers and business teams to directly ask AI about services and resolve doubts. Improved knowledge accessibility and reduced support tickets by 60%.
             </li>
             <li className="content is-marginless" style={{fontSize: '0.8rem'}}>
               <span className="heading is-marginless">
-                Operational Automation
-                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot Redis</span>
+                Internal CRM Tools Development
+                <span style={{marginLeft: '5px', fontSize: '10px', fontFamily: 'monospace', color: '#00d1b2'}}>Java Spring Boot React</span>
               </span>
-              Implemented business logic for product readiness workflows and operational automation systems using Spring Boot microservices, reducing manual intervention by 85%.
+              Built internal CRM tools enabling business team to manage product status (online/offline/ready) directly from CRM interface. Improved business team productivity by 85% and reduced manual coordination efforts.
             </li>
           </ul>
 
